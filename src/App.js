@@ -5,13 +5,19 @@ import { useState } from "react";
 import SettingsContext from "./components/settingsContext/SettingsContext";
 
 function App() {
-  const [showSettings, setShowSettings] = useState({ initialState: false });
+  const [showSettings, setShowSettings] = useState(false);
+  const [workMinutes, setWorkMinutes] = useState(45);
+  const [breakMinutes, setBreakMinutes] = useState(15);
   return (
     <main>
       <SettingsContext.Provider
         value={{
-          workMinutes: 50,
-          breakMinutes: 15,
+          showSettings,
+          setShowSettings,
+          workMinutes: workMinutes,
+          breakMinutes: breakMinutes,
+          setWorkMinutes,
+          setBreakMinutes,
         }}
       >
         {showSettings ? <Settings /> : <Timer />}

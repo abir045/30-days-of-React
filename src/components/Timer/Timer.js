@@ -31,6 +31,7 @@ const Timer = () => {
         (nextMode === "work"
           ? settingsInfo.workMinutes
           : settingsInfo.breakMinutes) * 60;
+
       setSecondsLeft(nextSeconds);
 
       setMode(nextMode);
@@ -120,7 +121,14 @@ const Timer = () => {
           />
         )}
         <div>
-          <BsFillStopCircleFill size={"5.5em"} />
+          <BsFillStopCircleFill
+            size={"5.5em"}
+            onClick={() => {
+              setSecondsLeft(settingsInfo.workMinutes * 0);
+              setIsPaused(true);
+              isPausedRef.current = true;
+            }}
+          />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { AiFillPlayCircle, AiTwotoneAccountBook } from "react-icons/ai";
+import { AiFillPlayCircle } from "react-icons/ai";
 import { AiFillPauseCircle } from "react-icons/ai";
 import { BsFillStopCircleFill } from "react-icons/bs";
 import { FiSettings } from "react-icons/fi";
